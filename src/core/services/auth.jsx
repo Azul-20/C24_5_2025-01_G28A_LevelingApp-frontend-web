@@ -32,20 +32,19 @@ export async function loginWithGoogle() {
 
     return { success: true };
   } catch (error) {
-    console.error('Error al iniciar sesión con Google:', error);
     return { success: false, message: error.message };
   }
-}
+};
 
 export function logout() {
   localStorage.removeItem('token');
   localStorage.removeItem('email');
   signOut(auth);
-}
+};
 
 export function getToken() {
   return localStorage.getItem('token');
-}
+};
 
 export function getUserInfo() {
   const token = getToken();
@@ -55,7 +54,6 @@ export function getUserInfo() {
     const decoded = jwtDecode(token);
     return decoded; // contiene uid, email, role, exp, etc.
   } catch (error) {
-    console.error('Error al decodificar el token:', error);
     return null;
   }
-}
+};

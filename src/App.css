@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+:root {
+  --font-poetsen: "Poetsen One", sans-serif;
+  --font-spartan: "League Spartan", sans-serif;
+  --box-radius: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+[data-theme="default"] {
+  --bg-image: none;
+  --bg-color: linear-gradient(180deg, #cae2ec 0%, #9ecce2 20%, #6cb4d8 40%, #2a9bcf 60%, #0084c8 80%, #006fc1 100%);
+  --default-color: #4d4841;
+  --accent-color: #683502;
+  --button-color: #000000;
+  --button-bg: #6cb4d8;
+  --box-bg: rgba(255, 255, 255, 0.65);
+  --box-stroke: #FFFFFF;
+  --card-bg: rgba(127, 202, 237, 0.7);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+[data-theme="dark"] {
+  --bg-image: none;
+  --bg-color: linear-gradient(180deg, #5D5F6B 0%, #1F3259 70%, #000847 100%);
+  --default-color: #ccfcef;
+  --accent-color: #7fffc5;
+  --button-color: #FFFFFF;
+  --button-bg: #2d4d8c;
+  --box-bg: rgba(0, 0, 0, 0.65);
+  --box-stroke: #4F4F4F;
+  --card-bg: rgba(39, 33, 106, 0.7);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+[data-theme="gamer"] {
+  --bg-image: url(../../Prototipo/tecsup.jpg); 
+  --bg-color: linear-gradient(180deg,rgb(15, 23, 42) 0%,rgb(107, 33, 168) 70%,rgb(30, 41, 59) 100%);
+  --default-color: #CCDEFC;
+  --accent-color: #7FAFFF;
+  --button-color: #FFFFFF;
+  --button-bg: linear-gradient(135deg, #61C3BB, #1C867E, #02AFE4);
+  --box-bg: linear-gradient(225deg, rgba(30, 58, 138, 0.9), rgba(23, 37, 84, 0.8), rgba(8, 47, 73, 0.85));
+  --box-stroke: #0A6A96;
+  --card-bg: rgba(4, 73, 105, 0.7);
+}
+
+.fondo {
+  background: var(--bg-color);
+}
+
+.tema {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 5px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--box-bg);
+  color: var(--default-color);
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize;
 }
 
-.App-link {
-  color: #61dafb;
+.opciones {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  background: var(--box-bg);
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+  top: 55px;
+  right: 20px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-tema {
+  background: transparent;
+  border: none;
+  padding: 5px 8px;
+  color: var(--default-color);
+  cursor: pointer;
 }

@@ -1,0 +1,235 @@
+.general {
+    background-image: var(--bg-image), var(--bg-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+.general header {
+    width: 100%;
+    padding: 45px 0 45px 0;
+    text-align: center;
+}
+
+.general header span .bi.bi-mortarboard {
+    font-size: 50px;
+    color: var(--default-color);
+}
+
+.general main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: var(--font-poetsen);
+    color: var(--default-color);
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: var(--font-spartan);
+    color: var(--default-color);
+    font-weight: bold;
+}
+
+h5 {
+    font-weight: 300;
+    margin-top: 15px;
+    padding: 5px 15px;
+    font-family: var(--font-spartan);
+    border: 1px solid var(--box-stroke);
+    background: var(--card-bg);
+    border-radius: 15px;
+    color: var(--default-color);
+}
+
+.general main .contenido {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.general main .contenido .box {
+    display: flex;
+    flex-direction: column;
+    width: 410px;
+    background: var(--box-bg);
+    border: 1px solid var(--box-stroke);
+    font-family: var(--font-spartan);
+    padding: 50px 30px;
+    border-radius: 20px;
+    margin-bottom: 80px;
+}
+
+.general main .contenido .box h2 {
+    color: var(--default-color);
+    font-weight: bold;
+    font-size: 35px;
+    text-wrap: wrap;
+    text-align: center;
+}
+
+.general main .contenido .box .info {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.general main .contenido .box .info .card {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    background: var(--card-bg);
+    border-radius: 10px;
+}
+
+.general main .contenido .box .info .card .bi {
+    font-size: 40px;
+}
+
+.bi-cpu {
+    color: #40B2DF;
+}
+
+.bi-controller {
+    color: #4A58D5;
+}
+
+.bi-trophy {
+    color: #259d97;
+}
+
+.bi-star {
+    color: #9249FF;
+}
+
+.general main .contenido .box .info .card .texto {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.general main .contenido .box .info .card .texto h4 {
+    color: var(--default-color);
+}
+
+.general main .contenido .box .info .card .texto p {
+    color: var(--accent-color);
+    margin: 0;
+    font-size: 15px;
+}
+
+.general main .contenido .box p {
+    color: var(--default-color);
+    font-size: 18px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.general main .contenido .box .login {
+    margin-top: 50px;
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.general main .contenido .box .login p {
+    margin: 0;
+}
+
+.general main .contenido .box .login .credenciales {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.general main .contenido .box .login .credenciales p {
+    text-align: start;
+    font-weight: bold;
+}
+
+.general main .contenido .box .login .credenciales span i {
+    position: absolute;
+    color: var(--default-color);
+    font-size: 15px;
+    left: 15px;
+    bottom: 10px;
+}
+
+.general main .contenido .box .login .credenciales input {
+    padding: 10px 35px;
+    background: rgba(4, 73, 105, 0.3);
+    border: 1px solid var(--box-stroke);
+    border-radius: 10px;
+    color: var(--button-color);
+}
+
+.general main .contenido .box .login button {
+    background: var(--button-bg);
+    color: var(--button-color);
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.general main .contenido .box .login button:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3)
+}
+
+.general main .contenido .box .google-btn {
+    background: transparent;
+    border: none;
+    cursor: auto;
+}
+
+.general main .contenido .box .google-btn .bi.bi-google {
+    background: var(--button-bg);
+    color: var(--button-color);
+    padding: 5px 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    transition: all 0.4s ease-in-out;
+}
+
+.general main .contenido .box .google-btn .bi.bi-google:hover {
+    background: conic-gradient(
+        #EA4335 0% 17%, 
+        #FBBC04 17% 50%,  
+        #34A853 50% 83%,  
+        #EA4335 83% 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2)
+}
+
+.general main .contenido .box .mensaje {
+    color: var(--accent-color);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.general main .contenido .box button {
+    margin-top: 20px;
+    background: transparent;
+    border: none;
+    color: var(--accent-color);
+    cursor: pointer;
+}

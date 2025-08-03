@@ -1,24 +1,31 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from "./components/Login";
-import Home from './components/Home';
-import ProtectedRoute from './ProtectedRoute';
+import { ThemeProvider } from './ThemeContext';
+import Login from "./pages/Login";
+import Home from './pages/Home';
+import ThemeSwitcher from './components/ThemeSwitcher';
+import ProtectedRoute from './core/guards/ProtectedRoute';
 import './App.css';
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route
-          path="/home"
-          element={
-            <ProtectedRoute>
-              <Home />
-            </ProtectedRoute>
-          }
-        />
-      </Routes>
-    </Router>
+    <div className='fondo'>
+      <ThemeProvider>
+        <Router>
+          <ThemeSwitcher />
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route
+              path="/home"
+              element={
+                <ProtectedRoute>
+                  <Home />
+                </ProtectedRoute>
+              }
+            />
+          </Routes>
+        </Router>
+      </ThemeProvider>
+    </div>
   );
 };
 
